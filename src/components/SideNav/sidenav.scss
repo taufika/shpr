@@ -1,0 +1,17 @@
+@import '../../variables/colors.scss';
+
+.sidenav {
+  background-color: #fff;
+  padding: 12px 0;
+
+  .nav-item {
+    padding: 12px 40px 12px 20px;
+    font-weight: bold;
+
+    &.active {
+      color: $primary-color;
+      border-left: 4px solid $primary-color;
+      padding-left: 16px;
+    }
+  }
+}
