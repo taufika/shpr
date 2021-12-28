@@ -1,0 +1,50 @@
+@import '../../variables/colors.scss';
+
+$separator-color: rgb(197, 197, 197);
+
+.user-card {
+  background-color: #fff;
+  margin-right: 32px;
+  width: 240px;
+
+  .header {
+    padding: 16px;
+    border-bottom: 2px solid $separator-color;
+
+    .driver-id {
+      font-size: 12px;
+      color: $separator-color;
+
+      .id-area {
+        color: $primary-color;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .body {
+    padding: 16px;
+
+    .pict-container {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 24px;
+      
+      img {
+        height: 100%;
+      }
+    }
+
+    .label {
+      font-size: 12px;
+      color: rgb(146, 146, 146);
+      margin-top: 16px;
+    }
+
+    .value {
+      font-size: 14px;
+    }
+  }
+}

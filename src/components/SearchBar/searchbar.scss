@@ -1,0 +1,58 @@
+@import '../../variables/colors.scss';
+
+.search-bar {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    color: $primary-color;
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  .search-area {
+    display: flex;
+
+    .search-icon {
+      border: 1px solid #727272;
+      border-right: 0;
+      padding: 8px 12px;
+      color: $primary-color;
+    }
+
+    input {
+      border-radius: 0;
+      border: 1px solid #727272;
+      border-left: 0;
+      padding: 8px 12px;
+      padding-left: 0;
+      width: 140px;
+      margin-right: 12px;
+
+      &:focus {
+        
+      }
+    }
+
+    button {
+      border-radius: 0;
+      border: 1px solid $primary-color;
+      background-color: $primary-color;
+      padding: 8px 12px;
+      color: #fff;
+
+      .fas {
+        margin-left: 12px;
+      }
+    }
+  }
+}

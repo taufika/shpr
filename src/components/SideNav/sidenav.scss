@@ -3,10 +3,16 @@
 .sidenav {
   background-color: #fff;
   padding: 12px 0;
+  width: 240px;
+  flex-shrink: 0;
 
   .nav-item {
     padding: 12px 40px 12px 20px;
     font-weight: bold;
+
+    .fas, .far {
+      margin-right: 12px;
+    }
 
     &.active {
       color: $primary-color;

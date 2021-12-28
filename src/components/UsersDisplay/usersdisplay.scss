@@ -1,0 +1,54 @@
+.users-display-main {
+  width: calc(100vw - 255px)
+}
+
+.ready {
+  padding: 32px;
+
+  .cards-place {
+    display: flex;
+    margin-top: 32px;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 40px;
+  }
+
+  .pagin-place {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+    button.page {
+      width: 160px;
+      border: 0;
+      background: none;
+      cursor: pointer;
+
+      .fas {
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+
+.loading, .error {
+  position: relative;
+  height: 100%;
+
+  span {
+    color: rgb(80, 80, 80);
+    display: inline-block;
+    min-width: 120px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+  }
+}
