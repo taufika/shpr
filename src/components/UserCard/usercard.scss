@@ -1,15 +1,17 @@
 @import '../../variables/colors.scss';
+@import '../../variables/mixins.scss';
 
-$separator-color: rgb(197, 197, 197);
 
 .user-card {
   background-color: #fff;
-  margin-right: 32px;
   width: 240px;
 
   .header {
     padding: 16px;
     border-bottom: 2px solid $separator-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     .driver-id {
       font-size: 12px;
@@ -19,6 +21,10 @@ $separator-color: rgb(197, 197, 197);
         color: $primary-color;
         margin-left: 8px;
       }
+    }
+
+    .fas {
+      color: $separator-color;
     }
   }
 
@@ -45,6 +51,31 @@ $separator-color: rgb(197, 197, 197);
 
     .value {
       font-size: 14px;
+    }
+  }
+}
+
+@include small-mobile-view() {
+  .user-card {
+    width: 100%;
+
+    .body {
+      display: flex;
+      column-gap: 12px;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .pict-container {
+        flex-shrink: 0;
+      }
+
+      .info-container {
+        width: 80%;
+      }
+
+      .label.email, .label.dob, .value.email, .value.dob {
+        display: none;
+      }
     }
   }
 }

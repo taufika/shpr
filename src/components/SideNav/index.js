@@ -1,10 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
 import './sidenav.scss';
 
-export default class SideNav extends React.Component {
+class SideNav extends React.Component {
+  getActiveClass() {
+    return this.props.isActive ? 'active' : '';
+  }
   render() {
-    return <div className='sidenav'>
+    return <div className={`sidenav ${this.getActiveClass()}`}>
       <div className='nav-item'>
         <i className="fas fa-home"></i>
         <span>Beranda</span>
@@ -20,3 +24,5 @@ export default class SideNav extends React.Component {
     </div>;
   };
 };
+const stateMapper = (state) => ({isActive: state.sidebar.isSidebarActive});
+export default connect(stateMapper)(SideNav);

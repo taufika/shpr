@@ -20,7 +20,7 @@ class UsersDisplay extends React.Component {
   }
 
   handleKeywordChange(keyword) {
-    this.setState({ keyword });
+    this.setState({ keyword, offset: 0 });
   }
 
   getFilteredUsers() {

@@ -1,4 +1,5 @@
 @import '../../variables/colors.scss';
+@import '../../variables/mixins.scss';
 
 .sidenav {
   background-color: #fff;
@@ -18,6 +19,38 @@
       color: $primary-color;
       border-left: 4px solid $primary-color;
       padding-left: 16px;
+    }
+  }
+}
+
+@include mobile-view() {
+  .sidenav {
+    position: fixed;
+    box-sizing: border-box;
+    height: calc(100vh - 80px);
+    top: 80px;
+    left: -260px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all ease-in 0.3s;
+    transition-property: left top;
+    visibility: hidden;
+    z-index: 990;
+
+    &.active {
+      left: 0;
+      visibility: visible;
+    }
+  }
+}
+
+@include small-mobile-view() {
+  .sidenav {
+    top: -100vh;
+    left: 0;
+    width: 100%;
+
+    &.active {
+      top: 80px;
     }
   }
 }

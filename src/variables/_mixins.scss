@@ -1,0 +1,12 @@
+@mixin mobile-view {
+  @media (max-width: 956px) {
+    @content;
+  }
+}
+
+@mixin small-mobile-view {
+  @media (max-width: 718px) {
+    @content;
+  }
+}
+

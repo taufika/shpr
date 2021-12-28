@@ -1,15 +1,30 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import Logo from '../../assets/shipper-logo-black.png';
 import Avatar from '../../assets/default_avatar.jpg';
 
+import { toggleSidebar } from '../../features/sidebar'
+
 import './navbar.scss';
 
-export default class Navbar extends React.Component {
+class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.toggleSidebar = this.toggleSidebar.bind(this);
+  }
+  toggleSidebar() {
+    this.props.dispatch(toggleSidebar());
+  }
   render() {
     return <nav className='navbar'>
-      <img src={Logo} alt='logo' className='logo' />
+      <button className='hamburger-menu' onClick={this.toggleSidebar}>
+        <i className="fas fa-bars" />
+      </button>
+      <div className='logo'>
+        <img src={Logo} alt='logo' className='logo' />
+      </div>
       <section className='user-info'>
-        <h4>Hello, 
+        <h4 className='hello'>Hello, 
           <span className='user-name'>{this.props.user.name || ''}</span>
         </h4>
         <div className='user-avatar'>
@@ -19,3 +34,5 @@ export default class Navbar extends React.Component {
     </nav>;
   }
 };
+
+export default connect()(Navbar);
