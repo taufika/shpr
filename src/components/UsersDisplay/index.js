@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { useSearchParams } from 'react-router-dom';
 
 import SearchBar from '../SearchBar';
 import UserCard from '../UserCard';
@@ -10,8 +11,8 @@ class UsersDisplay extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      offset: 0,
-      keyword: '',
+      offset: parseInt(this.props.router.searchParams.get('offset') || 0, 10),
+      keyword: this.props.router.searchParams.get('keyword') || '',
     }
     this.handleKeywordChange = this.handleKeywordChange.bind(this);
     this.getFilteredUsers = this.getFilteredUsers.bind(this);
@@ -21,6 +22,11 @@ class UsersDisplay extends React.Component {
 
   handleKeywordChange(keyword) {
     this.setState({ keyword, offset: 0 });
+    if (keyword) {
+      this.props.router.setSearchParams({ keyword });
+    } else {
+      this.props.router.setSearchParams({ });
+    }
   }
 
   getFilteredUsers() {
@@ -33,6 +39,7 @@ class UsersDisplay extends React.Component {
 
   handleChangePage(newOffset) {
     this.setState({ offset: newOffset });
+    this.props.router.setSearchParams({ keyword: this.state.keyword, offset: newOffset });
   }
 
   render() {
@@ -86,5 +93,19 @@ class UsersDisplay extends React.Component {
   };
 }
 
+function UserDisplayWrapper(Component) {
+  function UserDisplayWithRoute(props) {
+    let [searchParams, setSearchParams] = useSearchParams();
+    return (
+      <Component 
+        {...props}
+        router={{ searchParams, setSearchParams }}
+      />
+    );
+  }
+
+  return UserDisplayWithRoute;
+}
+
 const propsMatcher = state => ({ users: state.users.users, status: state.users.status });
-export default connect(propsMatcher)(UsersDisplay);
+export default UserDisplayWrapper(connect(propsMatcher)(UsersDisplay));
