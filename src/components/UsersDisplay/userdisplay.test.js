@@ -1,9 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { assignUsers, setError, setLoading, setReady } from '../../features/users'
-import { useSearchParams } from 'react-router-dom';
 
 import store from '../../store';
 
