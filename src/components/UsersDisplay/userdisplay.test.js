@@ -108,6 +108,41 @@ describe('Component:UserDisplay', () => {
     expect(window.location.search).toContain('keyword=search+keyword');
   });
 
+  it('Should let user delete keyword and then remove query from url', () => {
+    store.dispatch(assignUsers(
+      Array(7)
+        .fill(dummyUser)
+    ));
+    store.dispatch(setReady());
+    render(wrapped());
+    const input = screen.getByTestId('search-input');
+    fireEvent.change(input, { target: { value: 'test' } });
+    expect(window.location.search).toContain('keyword=test');
+    fireEvent.change(input, { target: { value: '' } });
+    expect(window.location.search).not.toContain('keyword');
+  });
+
+  it('Should let user go next page and back to previous page', () => {
+    render(wrapped());
+    store.dispatch(assignUsers(
+      Array(7)
+        .fill(dummyUser)
+    ));
+    store.dispatch(setReady());
+    const prevPage = screen.getByTestId('prev-button');
+    const nextPage = screen.getByTestId('next-button');
+    // go to page 2
+    fireEvent.click(nextPage);
+    // go back to page 1
+    fireEvent.click(prevPage);
+
+    const cards = screen.getAllByTestId('user-card');
+    expect(cards.length).toBe(5);
+    expect(prevPage.disabled).toBe(true);
+    expect(nextPage.disabled).toBe(false);
+    expect(window.location.search).toContain('offset=0');
+  });
+
   it('Should get component state from url search query on load', () => {
     Object.defineProperty(window, 'location', {
       value: {

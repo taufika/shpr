@@ -25,7 +25,7 @@ class Navbar extends React.Component {
       </div>
       <section className='user-info'>
         <h4 className='hello'>Hello, 
-          <span className='user-name'>{this.props.user.name || ''}</span>
+          <span className='user-name'>{this.props.user.name}</span>
         </h4>
         <div className='user-avatar'>
           <img src={Avatar} alt='avatar' />

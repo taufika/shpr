@@ -13,7 +13,7 @@ function App() {
   const dispatch = useDispatch();
 
   const getUsersThunk = async (dispatch, getState) => {
-    if (getState().users.length) return;
+    if (getState().users.users.length) return;
     dispatch(setLoading());
 
     // check from local storage
@@ -30,8 +30,7 @@ function App() {
       window.sessionStorage.setItem('shprUsers', JSON.stringify(apiResult.data.results));
       dispatch(assignUsers(apiResult.data.results));
       dispatch(setReady());
-    } catch (e) {
-      console.error(e);
+    } catch (_) {
       dispatch(setError());
     }
   }
