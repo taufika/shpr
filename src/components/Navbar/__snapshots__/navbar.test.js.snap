@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component:Navbar Should render and match snapshot 1`] = `
+<div>
+  <nav
+    class="navbar"
+  >
+    <button
+      class="hamburger-menu"
+      data-testid="navbar-hamburger"
+    >
+      <i
+        class="fas fa-bars"
+      />
+    </button>
+    <div
+      class="logo"
+    >
+      <img
+        alt="logo"
+        class="logo"
+        src="shipper-logo-black.png"
+      />
+    </div>
+    <section
+      class="user-info"
+    >
+      <h4
+        class="hello"
+      >
+        Hello,
+        <span
+          class="user-name"
+        >
+          Shipper User
+        </span>
+      </h4>
+      <div
+        class="user-avatar"
+      >
+        <img
+          alt="avatar"
+          src="default_avatar.jpg"
+        />
+      </div>
+    </section>
+  </nav>
+</div>
+`;

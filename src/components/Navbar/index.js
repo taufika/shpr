@@ -17,7 +17,7 @@ class Navbar extends React.Component {
   }
   render() {
     return <nav className='navbar'>
-      <button className='hamburger-menu' onClick={this.toggleSidebar}>
+      <button className='hamburger-menu' onClick={this.toggleSidebar} data-testid='navbar-hamburger'>
         <i className="fas fa-bars" />
       </button>
       <div className='logo'>

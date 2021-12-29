@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components:SearchBar Should render and match snapshot 1`] = `
+<div>
+  <div
+    class="search-bar"
+  >
+    <div
+      class="title-area"
+    >
+      <h1>
+        Driver Management
+      </h1>
+      <h3>
+        Data driver yang bekerja dengan Anda.
+      </h3>
+    </div>
+    <div
+      class="search-area"
+    >
+      <div
+        class="search-icon"
+      >
+        <i
+          class="fas fa-search"
+        />
+      </div>
+      <input
+        data-testid="search-input"
+        placeholder="Cari Driver"
+        value=""
+      />
+      <button
+        class="add-driver"
+      >
+        Tambah Driver
+        <i
+          class="fas fa-plus"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;

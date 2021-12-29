@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component:SideNav Should match snapshot 1`] = `
+<div>
+  <div
+    class="sidenav "
+    data-testid="sidenav"
+  >
+    <div
+      class="nav-item"
+    >
+      <i
+        class="fas fa-home"
+      />
+      <span>
+        Beranda
+      </span>
+    </div>
+    <div
+      class="nav-item active"
+    >
+      <i
+        class="fas fa-user"
+      />
+      <span>
+        Driver Management
+      </span>
+    </div>
+    <div
+      class="nav-item"
+    >
+      <i
+        class="far fa-calendar"
+      />
+      <span>
+        Pickup
+      </span>
+    </div>
+  </div>
+</div>
+`;

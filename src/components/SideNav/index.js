@@ -8,7 +8,7 @@ class SideNav extends React.Component {
     return this.props.isActive ? 'active' : '';
   }
   render() {
-    return <div className={`sidenav ${this.getActiveClass()}`}>
+    return <div className={`sidenav ${this.getActiveClass()}`} data-testid='sidenav'>
       <div className='nav-item'>
         <i className="fas fa-home"></i>
         <span>Beranda</span>

@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component:UserCard Should match snapshot 1`] = `
+<div>
+  <div
+    class="user-card"
+  >
+    <div
+      class="header"
+    >
+      <div
+        class="driver-id"
+      >
+        <span>
+          Driver ID
+        </span>
+        <span
+          class="id-area"
+        >
+          DRV
+          632
+        </span>
+      </div>
+      <i
+        class="fas fa-ellipsis-h"
+      />
+    </div>
+    <div
+      class="body"
+    >
+      <div
+        class="pict-container"
+      >
+        <img
+          alt="drivers profile"
+          src="https://some.picture.url"
+        />
+      </div>
+      <section
+        class="info-container"
+      >
+        <div
+          class="label name"
+        >
+          Nama Driver
+        </div>
+        <div
+          class="value name"
+        >
+          Taufik
+          , 
+          Akbar
+        </div>
+        <div
+          class="label phone"
+        >
+          Telepon
+        </div>
+        <div
+          class="value phone"
+        >
+          082129136223
+        </div>
+        <div
+          class="label email"
+        >
+          Email
+        </div>
+        <div
+          class="value email"
+        >
+          taufik.akbar7@gmail.com
+        </div>
+        <div
+          class="label dob"
+        >
+          Tanggal Lahir
+        </div>
+        <div
+          class="value dob"
+        >
+          17-05-1994
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;

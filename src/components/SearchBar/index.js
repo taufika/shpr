@@ -17,7 +17,7 @@ export default class SearchBar extends React.Component {
         <div className='search-icon'>
           <i className="fas fa-search"></i>
         </div>
-        <input value={this.props.keyword} placeholder='Cari Driver' onChange={this.handleInput.bind(this)}/>
+        <input value={this.props.keyword} placeholder='Cari Driver' onChange={this.handleInput.bind(this)} data-testid='search-input'/>
         <button className='add-driver'>
           Tambah Driver
           <i className="fas fa-plus"></i>
