@@ -61,6 +61,7 @@ class UsersDisplay extends React.Component {
           </div>
           <div className='pagin-place'>
             <button
+              data-testid='prev-button'
               className='prev page'
               disabled={this.state.offset === 0} 
               onClick={() => this.handleChangePage(this.state.offset - pageSize)}>
@@ -68,6 +69,7 @@ class UsersDisplay extends React.Component {
               <span>Previous Page</span>
             </button>
             <button
+              data-testid='next-button'
               className='next page'
               disabled={this.state.offset + pageSize >= this.getFilteredUsers().length }
               onClick={() => this.handleChangePage(this.state.offset + pageSize)}>

@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main Component: App Should render and match snapshot 1`] = `
+<div>
+  <main
+    class="app"
+  >
+    <nav
+      class="navbar"
+    >
+      <button
+        class="hamburger-menu"
+        data-testid="navbar-hamburger"
+      >
+        <i
+          class="fas fa-bars"
+        />
+      </button>
+      <div
+        class="logo"
+      >
+        <img
+          alt="logo"
+          class="logo"
+          src="shipper-logo-black.png"
+        />
+      </div>
+      <section
+        class="user-info"
+      >
+        <h4
+          class="hello"
+        >
+          Hello,
+          <span
+            class="user-name"
+          >
+            Shipper User
+          </span>
+        </h4>
+        <div
+          class="user-avatar"
+        >
+          <img
+            alt="avatar"
+            src="default_avatar.jpg"
+          />
+        </div>
+      </section>
+    </nav>
+    <section
+      class="main-container"
+    >
+      <div
+        class="sidenav "
+        data-testid="sidenav"
+      >
+        <div
+          class="nav-item"
+        >
+          <i
+            class="fas fa-home"
+          />
+          <span>
+            Beranda
+          </span>
+        </div>
+        <div
+          class="nav-item active"
+        >
+          <i
+            class="fas fa-user"
+          />
+          <span>
+            Driver Management
+          </span>
+        </div>
+        <div
+          class="nav-item"
+        >
+          <i
+            class="far fa-calendar"
+          />
+          <span>
+            Pickup
+          </span>
+        </div>
+      </div>
+      <div>
+        User-Display-Mock
+      </div>
+    </section>
+  </main>
+</div>
+`;

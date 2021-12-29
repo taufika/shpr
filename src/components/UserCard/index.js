@@ -14,7 +14,7 @@ export default class UserCard extends React.Component {
   render() {
     const { name, picture, cell, email, dob } = this.props.user;
 
-    return <div className='user-card'>
+    return <div className='user-card' data-testid='user-card'>
       <div className='header'>
         <div className='driver-id'>
           <span>Driver ID</span>
